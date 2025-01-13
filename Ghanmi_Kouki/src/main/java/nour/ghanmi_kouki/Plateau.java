@@ -79,7 +79,7 @@ public class Plateau {
      * @param couleur La couleur du pion à jouer.
      * @return true si une capture est possible dans la direction donnée, false sinon.
      */
-    private boolean peutCapturerDansDirection(int ligne, int colonne, int dx, int dy, Pion.Couleur couleur) {
+    public boolean peutCapturerDansDirection(int ligne, int colonne, int dx, int dy, Pion.Couleur couleur) {
         int x = ligne + dx;
         int y = colonne + dy;
         boolean pionAdverseTrouvee = false;
@@ -131,7 +131,7 @@ public class Plateau {
      * @param dy      Direction en y.
      * @param couleur La couleur du pion à jouer.
      */
-    private void retournerPionsDansDirection(int ligne, int colonne, int dx, int dy, Pion.Couleur couleur) {
+    public void retournerPionsDansDirection(int ligne, int colonne, int dx, int dy, Pion.Couleur couleur) {
         int x = ligne + dx;
         int y = colonne + dy;
 
