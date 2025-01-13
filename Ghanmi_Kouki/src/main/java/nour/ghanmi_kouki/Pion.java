@@ -40,9 +40,18 @@ public class Pion {
         return couleur;
     }
     
+    /**
+     * Setteur pour définir une nouvelle couleur pour le pion
+     * ceci est particulièrement util lors des captures des pions
+     * 
+     * @param couleur La nouvelle couleur à attribuer au pion.
+     */
+    public void setCouleur(Couleur couleur) {
+        this.couleur = couleur;
+    }
+    
     
 
     
-
-    
+   
 }
