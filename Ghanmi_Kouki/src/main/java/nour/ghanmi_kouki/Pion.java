@@ -29,8 +29,43 @@ public class Pion {
     public Pion(Couleur couleur) {
         this.couleur = couleur;
     }
-
+   
     
-
+    /**
+     * Getteur pour retourner la couleur actuelle du pion.
+     *
+     * @return La couleur du pion.
+     */
+    public Couleur getCouleur() {
+        return couleur;
+    }
     
+    /**
+     * Setteur pour définir une nouvelle couleur pour le pion
+     * ceci est particulièrement util lors des captures des pions
+     * 
+     * @param couleur La nouvelle couleur à attribuer au pion.
+     */
+    public void setCouleur(Couleur couleur) {
+        this.couleur = couleur;
+    }
+    
+    /**
+     * méthode toString
+     * Retourne une représentation textuelle du pion pour l'affichage.
+     * - "N" pour Noir.
+     * - "B" pour Blanc.
+     * - "." pour Vide.
+     *
+     * @return Un caractère représentant le pion.
+     */
+    @Override
+    public String toString() {
+        return switch (couleur) {
+            case NOIR -> "N";
+            case BLANC -> "B";
+            default -> ".";
+        };
+    }
+
 }
