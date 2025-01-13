@@ -50,8 +50,25 @@ public class Pion {
         this.couleur = couleur;
     }
     
+    /**
+     * méthode toString
+     * Retourne une représentation textuelle du pion pour l'affichage.
+     * - "N" pour Noir.
+     * - "B" pour Blanc.
+     * - "." pour Vide.
+     *
+     * @return Un caractère représentant le pion.
+     */
+    @Override
+    public String toString() {
+        return switch (couleur) {
+            case NOIR -> "N";
+            case BLANC -> "B";
+            default -> ".";
+        };
+    }
+    
     
 
-    
-   
+       
 }
