@@ -19,8 +19,8 @@ public class Game {
  */
 public Game(String wPlayerName, String bPlayerName) {
     this.plateau = new Plateau();
-    this.wPlayer = new Player(wPlayerName, Pion.Couleur.NOIR);
-    this.bPlayer = new Player(bPlayerName, Pion.Couleur.BLANC);
+    this.wPlayer = new Player(wPlayerName, Pion.Couleur.BLANC);
+    this.bPlayer = new Player(bPlayerName, Pion.Couleur.NOIR);
     this.CurrPlayer = bPlayer; // Noir commence le jeu.
 }
  /**
