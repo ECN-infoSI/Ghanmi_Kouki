@@ -31,7 +31,7 @@ public class Player {
      * @return couleur des pièces du joueurs.
      */
     public Pion.Couleur getCouleur() {
-        return color;
+        return this.color;
     }
 
 
