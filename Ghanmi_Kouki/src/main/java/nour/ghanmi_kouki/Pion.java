@@ -67,8 +67,5 @@ public class Pion {
             default -> ".";
         };
     }
-    
-    
 
-       
 }
