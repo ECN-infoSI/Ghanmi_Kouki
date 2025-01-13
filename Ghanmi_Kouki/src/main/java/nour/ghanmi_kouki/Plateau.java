@@ -26,7 +26,7 @@ public class Plateau {
      * methode pour initialise le plateau avec des pions vides
      * et les 4 positions de départ.
      */
-    private void initialiserPlateau() {
+    public void initialiserPlateau() {
         for (int i = 0; i < TAILLE; i++) {
             for (int j = 0; j < TAILLE; j++) {
                 grille[i][j] = new Pion(Pion.Couleur.VIDE);
@@ -55,6 +55,18 @@ public class Plateau {
             }
             System.out.println();
         }
+    }
+    
+    /**
+     * méthode pour vérifie si les indices donnés sont valides et qu'on ne dépasse
+     * pas les limites du plateau
+     *
+     * @param ligne   L'indice de la ligne.
+     * @param colonne L'indice de la colonne.
+     * @return true si les indices sont valides, false sinon.
+     */
+    public boolean indicesValides(int ligne, int colonne) {
+        return ligne >= 0 && ligne < TAILLE && colonne >= 0 && colonne < TAILLE;
     }
      
 }
