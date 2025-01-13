@@ -12,7 +12,7 @@ public class Plateau {
     
     // attributs de la classe
     private static final int TAILLE = 8;
-    private Pion[][] grille;
+    public Pion[][] grille;
 
     /**
      * Constructeur de la classe Plateau. Initialise le plateau avec les positions initiales.
@@ -23,7 +23,8 @@ public class Plateau {
     }
     
     /**
-     * Initialise le plateau avec des pions vides et les positions de départ.
+     * methode pour initialise le plateau avec des pions vides
+     * et les 4 positions de départ.
      */
     private void initialiserPlateau() {
         for (int i = 0; i < TAILLE; i++) {
@@ -36,7 +37,24 @@ public class Plateau {
         grille[4][3].setCouleur(Pion.Couleur.NOIR);
         grille[4][4].setCouleur(Pion.Couleur.BLANC);
     }
-   
     
-    
+    /**
+     * Affichage du plateau dans la console.
+     */
+    public void afficherPlateau() {
+        System.out.print("  ");
+        for (int i = 0; i < TAILLE; i++) {
+            System.out.print((char) ('a' + i) + " ");
+        }
+        System.out.println();
+
+        for (int i = 0; i < TAILLE; i++) {
+            System.out.print((i + 1) + " ");
+            for (int j = 0; j < TAILLE; j++) {
+                System.out.print(grille[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+     
 }
