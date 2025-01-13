@@ -23,7 +23,26 @@ public Game(String wPlayerName, String bPlayerName) {
     this.bPlayer = new Player(bPlayerName, Pion.Couleur.BLANC);
     this.CurrPlayer = bPlayer; // Noir commence le jeu.
 }
-
+    
+    /**
+     * Test si joueur a des coups valides à jouer
+     *
+     * @param joueur joueur
+     * @return true si le joueur peut jouer un coup false sinon
+     */
+    private boolean joueurPeutJouer(Player joueur) {
+        Pion.Couleur couleur = joueur.getCouleur();
+    
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (plateau.estCoupValide(i, j, couleur)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
 /**
  * Montre le nombre de pièces pour chaque joueur 
  * et le joueur qui a gagné
