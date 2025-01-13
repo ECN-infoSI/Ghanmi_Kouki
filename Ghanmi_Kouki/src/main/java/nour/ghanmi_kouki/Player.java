@@ -1,21 +1,39 @@
 package nour.ghanmi_kouki;
 
 /*
- * Class to represent the players of the game
+ * Classe représntnat les joueurs
  */
 public class Player {
-    private String name; //name of the player
-    private Pawn.Color color; //Enum defined in class Pawn
+    private String name; //Nom du joueur
+    private Pion.Color color; //couleur des pions du joueur
     /*
-     * Constructor of the class player
+     * Constructeru de la classe Player
      * 
      * @param name: Name of the player
      * @param color: color of the player's pawns
      */
-    public Player(String name, Pawn.color color){
+    public Player(String name, Pion.color color){
         this.name= name;
         this.color = color;
     }
+     /**
+     * Getter pour le nom du joueur.
+     *
+     * @return nom du joueur.
+     */
+    public String getNom() {
+        return this.name;
+    }
+
+    /**
+     * Getter pour la couleur des pièces du joueurs.
+     *
+     * @return couleur des pièces du joueurs.
+     */
+    public Pion.Couleur getCouleur() {
+        return color;
+    }
+
 
 
 }
