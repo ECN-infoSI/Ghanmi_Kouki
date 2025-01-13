@@ -73,7 +73,7 @@
                 <version>3.9.0.2155</version>
                 <configuration>
                     <sonar.projectKey>DhaferG_Test_mvn_automs</sonar.projectKey>
-                    <sonar.login>${env.SONAR_TOKEN}</sonar.login> <!-- Remplacez par votre token -->
+                    <sonar.login>nekouki</sonar.login> <!-- Remplacez par votre token -->
                 </configuration>
             </plugin>
             <!-- Jacoco for test coverage-->
