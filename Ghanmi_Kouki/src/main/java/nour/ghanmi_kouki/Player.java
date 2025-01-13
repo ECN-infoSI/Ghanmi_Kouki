@@ -1,18 +1,18 @@
 package nour.ghanmi_kouki;
 
-/*
+/**
  * Classe représntnat les joueurs
  */
 public class Player {
     private String name; //Nom du joueur
-    private Pion.Color color; //couleur des pions du joueur
-    /*
+    private Pion.Couleur color; //couleur des pions du joueur
+    /**
      * Constructeru de la classe Player
      * 
      * @param name: Name of the player
      * @param color: color of the player's pawns
      */
-    public Player(String name, Pion.color color){
+    public Player(String name, Pion.Couleur color){
         this.name= name;
         this.color = color;
     }
