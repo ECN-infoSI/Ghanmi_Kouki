@@ -79,7 +79,7 @@ public class Plateau {
      * @param couleur La couleur du pion à jouer.
      * @return true si une capture est possible dans la direction donnée, false sinon.
      */
-    private boolean peutCapturerDansDirection(int ligne, int colonne, int dx, int dy, Pion.Couleur couleur) {
+    public boolean peutCapturerDansDirection(int ligne, int colonne, int dx, int dy, Pion.Couleur couleur) {
         int x = ligne + dx;
         int y = colonne + dy;
         boolean pionAdverseTrouvee = false;
