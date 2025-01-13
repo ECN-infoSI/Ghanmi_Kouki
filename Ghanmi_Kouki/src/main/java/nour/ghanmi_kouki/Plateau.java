@@ -121,5 +121,27 @@ public class Plateau {
         }
         return false;
     }
+    
+    /**
+     * méthode pour retourne les pions capturés dans une direction donnée.
+     *
+     * @param ligne   L'indice de la ligne.
+     * @param colonne L'indice de la colonne.
+     * @param dx      Direction en x.
+     * @param dy      Direction en y.
+     * @param couleur La couleur du pion à jouer.
+     */
+    private void retournerPionsDansDirection(int ligne, int colonne, int dx, int dy, Pion.Couleur couleur) {
+        int x = ligne + dx;
+        int y = colonne + dy;
+
+        while (grille[x][y].getCouleur() != couleur) {
+            grille[x][y].setCouleur(couleur);
+            x += dx;
+            y += dy;
+        }
+    }
+    
+    
      
 }
