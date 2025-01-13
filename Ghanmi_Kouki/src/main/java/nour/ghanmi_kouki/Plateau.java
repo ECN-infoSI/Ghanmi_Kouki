@@ -68,5 +68,34 @@ public class Plateau {
     public boolean indicesValides(int ligne, int colonne) {
         return ligne >= 0 && ligne < TAILLE && colonne >= 0 && colonne < TAILLE;
     }
+    
+    /**
+     * Vérifie si un pion peut capturer dans une direction donnée.
+     *
+     * @param ligne   L'indice de la ligne.
+     * @param colonne L'indice de la colonne.
+     * @param dx      Direction en x.
+     * @param dy      Direction en y.
+     * @param couleur La couleur du pion à jouer.
+     * @return true si une capture est possible dans la direction donnée, false sinon.
+     */
+    private boolean peutCapturerDansDirection(int ligne, int colonne, int dx, int dy, Pion.Couleur couleur) {
+        int x = ligne + dx;
+        int y = colonne + dy;
+        boolean pionAdverseTrouvee = false;
+
+        while (indicesValides(x, y)) {
+            if (grille[x][y].getCouleur() == Pion.Couleur.VIDE) {
+                return false;
+            }
+            if (grille[x][y].getCouleur() == couleur) {
+                return pionAdverseTrouvee;
+            }
+            pionAdverseTrouvee = true;
+            x += dx;
+            y += dy;
+        }
+        return false;
+    }
      
 }
