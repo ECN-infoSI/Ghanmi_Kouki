@@ -29,6 +29,18 @@ public class Pion {
     public Pion(Couleur couleur) {
         this.couleur = couleur;
     }
+   
+    
+    /**
+     * Getteur pour retourner la couleur actuelle du pion.
+     *
+     * @return La couleur du pion.
+     */
+    public Couleur getCouleur() {
+        return couleur;
+    }
+    
+    
 
     
 
