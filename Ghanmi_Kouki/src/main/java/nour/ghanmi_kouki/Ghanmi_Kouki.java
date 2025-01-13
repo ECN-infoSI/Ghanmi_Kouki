@@ -11,6 +11,7 @@ package nour.ghanmi_kouki;
 public class Ghanmi_Kouki {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Game partie = new Game("Alice", "Bob");
+        partie.jouer();
     }
 }
