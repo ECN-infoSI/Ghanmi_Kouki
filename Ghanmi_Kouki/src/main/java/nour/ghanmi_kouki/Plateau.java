@@ -97,5 +97,29 @@ public class Plateau {
         }
         return false;
     }
+    
+    /**
+     * Méthode pour vérifier si un coup est valide.
+     *
+     * @param ligne   L'indice de la ligne.
+     * @param colonne L'indice de la colonne.
+     * @param couleur La couleur du pion à jouer.
+     * @return true si le coup est valide, false sinon.
+     */
+    public boolean estCoupValide(int ligne, int colonne, Pion.Couleur couleur) {
+        if (!indicesValides(ligne, colonne) || grille[ligne][colonne].getCouleur() != Pion.Couleur.VIDE) {
+            return false;
+        }
+
+        for (int dx = -1; dx <= 1; dx++) {
+            for (int dy = -1; dy <= 1; dy++) {
+                if (dx == 0 && dy == 0) continue;
+                if (peutCapturerDansDirection(ligne, colonne, dx, dy, couleur)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
      
 }
