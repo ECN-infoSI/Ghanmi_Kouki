@@ -38,9 +38,11 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                    <manifestEntries>
+                    <archive>
+                    <manifest>
                         <Main-Class>nour.ghanmi_kouki.Ghanmi_Kouki</Main-Class>
-                    </manifestEntries>
+                    </manifest>
+                    </archive>
                     <classifier>sources</classifier> <!-- This adds a classifier to attach supplemental artifacts instead of replacing them was necessary for an error might not be though-->
                 </configuration>
                 <executions>

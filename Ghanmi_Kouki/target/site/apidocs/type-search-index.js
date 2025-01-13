@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"nour.ghanmi_kouki","l":"Pion.Couleur"},{"p":"nour.ghanmi_kouki","l":"Game"},{"p":"nour.ghanmi_kouki","l":"Ghanmi_Kouki"},{"p":"nour.ghanmi_kouki","l":"Pion"},{"p":"nour.ghanmi_kouki","l":"Plateau"},{"p":"nour.ghanmi_kouki","l":"Player"}];updateSearchResults();
